@@ -12,6 +12,14 @@ function displayTemaprature(response) {
 
   let temparatur = document.querySelector('#Temp')
   temparatur.innerHTML = Math.round(response.data.main.temp)
+
+  let max = Math.round(response.data.main.temp_max)
+  let maxTemaparature = document.querySelector('#max')
+  maxTemaparature.innerHTML = `${max}°C`
+
+  let min = Math.round(response.data.main.temp_min)
+  let minTemaparature = document.querySelector('#mini')
+  minTemaparature.innerHTML = `${min}°C`
 }
 
 // Day And Time
